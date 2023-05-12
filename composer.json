@@ -1,0 +1,63 @@
+{
+  "name": "g2id/sssertion",
+  "type": "library",
+  "description": "g2id Assertion Framework",
+  "authors": [
+    {
+      "name": "g2id",
+      "email": "peter@g2id.de"
+    },
+    {
+      "name": "Peter Giertz",
+      "email": "peter.giertz@g2id.de"
+    }
+  ],
+  "repositories": {
+    "packages": {
+      "type": "vcs",
+      "url": "https://github.com/g2id/Utilities.git"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "G2id\\Assertion\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "G2id\\AssertionTest\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.0",
+    "ext-intl": "*",
+    "ext-openssl": "*",
+    "g2id/utilities": "0.0.1"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.6",
+    "phpunit/phpunit": "^9.5",
+    "vimeo/psalm": "^4.7",
+    "phpmd/phpmd": "^2.10",
+    "povils/phpmnd": "^2.4",
+    "rector/rector": "^0.13.10"
+  },
+  "scripts": {
+    "cs-fix": "vendor/bin/phpcbf --standard=PSR12 src/ tests/",
+    "cs-check": "vendor/bin/phpcs --standard=PSR12 src/ tests/",
+    "phpmd": "vendor/bin/phpmd src/,tests/ text rulesets.xml",
+    "phpmnd": "vendor/bin/phpmnd src/",
+    "phpunit": "vendor/bin/phpunit --colors=always",
+    "psalm": "vendor/bin/psalm",
+    "psalm-info": "vendor/bin/psalm --show-info=true",
+    "rector-dryrun": "vendor/bin/rector process src/ tests/ --dry-run",
+    "rector-run": "vendor/bin/rector process src/Processing/ ",
+    "qa": [
+      "vendor/bin/phpunit --colors=always",
+      "@cs-check",
+      "@phpmnd",
+      "@phpmd",
+      "@psalm"
+    ]
+  }
+}
