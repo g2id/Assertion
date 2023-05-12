@@ -39,5 +39,4 @@ interface AssertionExpressionInterface
     public function isEqual($value1, $value2);
 
     public function isNotEqual($value1, $value2);
-
 }

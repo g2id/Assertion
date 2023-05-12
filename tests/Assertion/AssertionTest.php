@@ -7,7 +7,6 @@ use PHPUnit\Framework\TestCase;
 
 class AssertionTest extends TestCase
 {
-
     /**
      * @return void
      * @test

@@ -6,7 +6,6 @@ use G2id\Utilities\Utility\ClassUtility;
 
 class Assertion
 {
-
     private $output = [];
     private AssertionExpression $assertionExpression;
     private array $expressions = [];
@@ -76,5 +75,4 @@ class Assertion
     {
         return ClassUtility::getMethods($this->assertionExpression);
     }
-
 }

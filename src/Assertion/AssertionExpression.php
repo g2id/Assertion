@@ -8,7 +8,6 @@ use G2id\Utilities\Utility\ValidateUtility;
 
 class AssertionExpression implements AssertionExpressionInterface
 {
-
     public function isTrue($value): bool
     {
         $value = FormatUtility::toBoolean($value);
@@ -142,5 +141,4 @@ class AssertionExpression implements AssertionExpressionInterface
     {
         return gettype($value1) !== $value2;
     }
-
 }

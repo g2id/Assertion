@@ -32,7 +32,6 @@ class AssertionExpressionTest extends TestCase
         $value1 = 'Pineapple';
         $value2 = 'Pineapple';
         $this->assertTrue($assertionExpression->isEqual($value1, $value2));
-
     }
 
     /**
